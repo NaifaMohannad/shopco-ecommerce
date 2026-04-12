@@ -53,33 +53,59 @@ function ProductListPage() {
   ];
   const dressStyles = ["Casual", "Formal", "Party", "Gym"];
 
+  const isFirstRun = React.useRef(true);
+
+  // Runs when URL changes (from homepage clicks)
   useEffect(() => {
     dispatch(fetchCategories());
     const params = new URLSearchParams(location.search);
     const category = params.get("category") || "";
     const dress_style = params.get("dress_style") || "";
     const search = params.get("search") || "";
-    setFilters((prev) => ({ ...prev, category, dress_style }));
-    dispatch(fetchProducts({ category, dress_style, search }));
-  }, [location.search, dispatch]);
 
-  // Auto filter when filters change
+    isFirstRun.current = true;
+
+    setFilters({
+      category,
+      dress_style,
+      min_price: "",
+      max_price: "",
+      size: "",
+      color: "",
+    });
+    setSelectedSize("");
+    setSelectedColor("");
+    setPriceRange(500);
+
+    dispatch(fetchProducts({ category, dress_style, search }));
+  }, [location.search]);
+
+  // Runs when sidebar filters change
   useEffect(() => {
+    if (isFirstRun.current) {
+      isFirstRun.current = false;
+      return;
+    }
     const params = new URLSearchParams(location.search);
     const search = params.get("search") || "";
-    const dress_style = params.get("dress_style") || filters.dress_style || "";
-    const category = params.get("category") || filters.category || "";
+
     dispatch(
       fetchProducts({
-        category,
-        dress_style,
+        category: filters.category,
+        dress_style: filters.dress_style,
         size: selectedSize,
         color: selectedColor,
         max_price: priceRange < 500 ? priceRange : "",
         search: search,
       }),
     );
-  }, [filters, selectedSize, selectedColor, priceRange]);
+  }, [
+    filters.category,
+    filters.dress_style,
+    selectedSize,
+    selectedColor,
+    priceRange,
+  ]);
   const handleCategoryClick = (catName) => {
     setFilters({
       ...filters,
