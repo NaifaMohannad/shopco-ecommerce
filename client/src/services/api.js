@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-    baseURL: 'http://127.0.0.1:8000/api',
+    baseURL: 'https://shopco-api.onrender.com/api',
 });
 
 // Automatically add JWT token to every request
