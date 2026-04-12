@@ -39,7 +39,12 @@ class ProductSerializer(serializers.ModelSerializer):
 
     def get_image(self, obj):
         if obj.image:
-            return f'http://127.0.0.1:8000/media/{obj.image}'
+            image_url = str(obj.image)
+            # If already a Cloudinary URL return as is
+            if image_url.startswith('http'):
+                return image_url
+            # Otherwise build full URL
+            return f'https://shopco-api.onrender.com/media/{image_url}'
         return None
 
 class ProductListSerializer(serializers.ModelSerializer):
@@ -57,5 +62,10 @@ class ProductListSerializer(serializers.ModelSerializer):
 
     def get_image(self, obj):
         if obj.image:
-            return f'http://127.0.0.1:8000/media/{obj.image}'
+            image_url = str(obj.image)
+            # If already a Cloudinary URL return as is
+            if image_url.startswith('http'):
+                return image_url
+            # Otherwise build full URL
+            return f'https://shopco-api.onrender.com/media/{image_url}'
         return None
