@@ -18,8 +18,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary_storage',          # ← BEFORE staticfiles
-    'django.contrib.staticfiles',  # ← staticfiles here
+    'django.contrib.staticfiles',  
     'cloudinary',
     'rest_framework',
     'corsheaders',
@@ -28,7 +27,6 @@ INSTALLED_APPS = [
     'orders',
     'cart',
 ]
-
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -108,6 +106,12 @@ SIMPLE_JWT = {
 }
 
 # Cloudinary settings
+import cloudinary
+cloudinary.config(
+    cloud_name=config('CLOUDINARY_CLOUD_NAME'),
+    api_key=config('CLOUDINARY_API_KEY'),
+    api_secret=config('CLOUDINARY_API_SECRET')
+)
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': config('CLOUDINARY_CLOUD_NAME'),
     'API_KEY': config('CLOUDINARY_API_KEY'),
