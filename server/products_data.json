@@ -1,0 +1,732 @@
+[
+{
+  "model": "products.category",
+  "pk": 1,
+  "fields": {
+    "name": "T-shirts"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 2,
+  "fields": {
+    "name": "Shorts"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 3,
+  "fields": {
+    "name": "Shirts"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 4,
+  "fields": {
+    "name": "Hoodie"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 5,
+  "fields": {
+    "name": "Jeans"
+  }
+},
+{
+  "model": "products.dressstyle",
+  "pk": 1,
+  "fields": {
+    "name": "Casual"
+  }
+},
+{
+  "model": "products.dressstyle",
+  "pk": 2,
+  "fields": {
+    "name": "Formal"
+  }
+},
+{
+  "model": "products.dressstyle",
+  "pk": 3,
+  "fields": {
+    "name": "Party"
+  }
+},
+{
+  "model": "products.dressstyle",
+  "pk": 4,
+  "fields": {
+    "name": "Gym"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "name": "Gradient Graphic T-shirt",
+    "description": "A vibrant gradient graphic t-shirt perfect for casual wear. Made from soft and breathable cotton fabric.",
+    "price": "145.00",
+    "original_price": "145.00",
+    "discount": 0,
+    "image": "products/gradient-tshirt.png",
+    "category": 1,
+    "dress_style": 1,
+    "rating": "3.5",
+    "created_at": "2026-04-08T13:24:17.505Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "name": "Polo with Tipping Details",
+    "description": "A classic polo shirt with tipping details on the collar and cuffs. Perfect for smart casual occasions.",
+    "price": "180.00",
+    "original_price": "180.00",
+    "discount": 0,
+    "image": "products/Frame_34.png",
+    "category": 3,
+    "dress_style": 1,
+    "rating": "4.5",
+    "created_at": "2026-04-08T13:25:20.179Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "name": "Black Striped T-shirt",
+    "description": "A stylish black striped t-shirt perfect for any casual occasion.",
+    "price": "120.00",
+    "original_price": "150.00",
+    "discount": 30,
+    "image": "products/image_10_3.png",
+    "category": 1,
+    "dress_style": 1,
+    "rating": "5.0",
+    "created_at": "2026-04-08T13:27:06.498Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "name": "Skinny Fit Jeans",
+    "description": "Classic skinny fit jeans that offer a sleek and modern look.",
+    "price": "240.00",
+    "original_price": "260.00",
+    "discount": 20,
+    "image": "products/image_8_62NQG93.png",
+    "category": 5,
+    "dress_style": 1,
+    "rating": "3.5",
+    "created_at": "2026-04-08T13:28:13.734Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "name": "Checkered Shirt",
+    "description": "A trendy checkered shirt perfect for casual and semi-formal occasions.",
+    "price": "180.00",
+    "original_price": "180.00",
+    "discount": 0,
+    "image": "products/image_9.png",
+    "category": 3,
+    "dress_style": 1,
+    "rating": "4.5",
+    "created_at": "2026-04-08T13:29:28.446Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "name": "Sleeve Striped T-shirt",
+    "description": "A cool sleeve striped t-shirt with a unique design.",
+    "price": "130.00",
+    "original_price": "160.00",
+    "discount": 30,
+    "image": "products/image_10.png",
+    "category": 1,
+    "dress_style": 1,
+    "rating": "4.5",
+    "created_at": "2026-04-08T13:31:18.168Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 7,
+  "fields": {
+    "name": "Vertical Striped Shirt",
+    "description": "A elegant vertical striped shirt perfect for formal and casual wear.",
+    "price": "212.00",
+    "original_price": "232.00",
+    "discount": 20,
+    "image": "products/image_7.png",
+    "category": 3,
+    "dress_style": 2,
+    "rating": "5.0",
+    "created_at": "2026-04-08T13:33:13.114Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 8,
+  "fields": {
+    "name": "Courage Graphic T-shirt",
+    "description": "A bold graphic t-shirt with courage print design.",
+    "price": "145.00",
+    "original_price": "145.00",
+    "discount": 0,
+    "image": "products/image_8_1.png",
+    "category": 1,
+    "dress_style": 1,
+    "rating": "4.0",
+    "created_at": "2026-04-08T13:34:46.979Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 9,
+  "fields": {
+    "name": "Loose Fit Bermuda Shorts",
+    "description": "Comfortable loose fit bermuda shorts perfect for summer and gym.",
+    "price": "80.00",
+    "original_price": "80.00",
+    "discount": 0,
+    "image": "products/image_9_1.png",
+    "category": 2,
+    "dress_style": 4,
+    "rating": "3.0",
+    "created_at": "2026-04-08T13:36:02.825Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 10,
+  "fields": {
+    "name": "Faded Skinny Jeans",
+    "description": "Stylish faded skinny jeans with a modern look.",
+    "price": "210.00",
+    "original_price": "210.00",
+    "discount": 0,
+    "image": "products/image_10_2.png",
+    "category": 5,
+    "dress_style": 1,
+    "rating": "4.5",
+    "created_at": "2026-04-08T13:37:17.124Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 11,
+  "fields": {
+    "name": "T-shirt with Tape Details",
+    "description": "A unique t-shirt with tape details for a modern streetwear look.",
+    "price": "120.00",
+    "original_price": "120.00",
+    "discount": 0,
+    "image": "products/Frame_32.png",
+    "category": 1,
+    "dress_style": 1,
+    "rating": "4.5",
+    "created_at": "2026-04-08T13:39:46.483Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 12,
+  "fields": {
+    "name": "One Life Graphic T-shirt",
+    "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+    "price": "260.00",
+    "original_price": "300.00",
+    "discount": 40,
+    "image": "products/image_1.png",
+    "category": 1,
+    "dress_style": 1,
+    "rating": "4.5",
+    "created_at": "2026-04-08T13:41:07.449Z"
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 1,
+  "fields": {
+    "product": 1,
+    "size": "Small",
+    "color": "white",
+    "stock": 10
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 2,
+  "fields": {
+    "product": 1,
+    "size": "Medium",
+    "color": "white",
+    "stock": 10
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 3,
+  "fields": {
+    "product": 1,
+    "size": "Large",
+    "color": "white",
+    "stock": 10
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 4,
+  "fields": {
+    "product": 1,
+    "size": "X-Large",
+    "color": "white",
+    "stock": 10
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 5,
+  "fields": {
+    "product": 2,
+    "size": "Small",
+    "color": "pink",
+    "stock": 7
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 6,
+  "fields": {
+    "product": 2,
+    "size": "Medium",
+    "color": "pink",
+    "stock": 7
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 7,
+  "fields": {
+    "product": 2,
+    "size": "Large",
+    "color": "pink",
+    "stock": 7
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 8,
+  "fields": {
+    "product": 2,
+    "size": "X-Large",
+    "color": "pink",
+    "stock": 7
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 9,
+  "fields": {
+    "product": 3,
+    "size": "Small",
+    "color": "black",
+    "stock": 8
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 10,
+  "fields": {
+    "product": 3,
+    "size": "Large",
+    "color": "black",
+    "stock": 8
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 11,
+  "fields": {
+    "product": 3,
+    "size": "X-Large",
+    "color": "black",
+    "stock": 3
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 12,
+  "fields": {
+    "product": 3,
+    "size": "Medium",
+    "color": "black",
+    "stock": 3
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 13,
+  "fields": {
+    "product": 4,
+    "size": "Small",
+    "color": "denim blue",
+    "stock": 10
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 14,
+  "fields": {
+    "product": 4,
+    "size": "Medium",
+    "color": "denim blue",
+    "stock": 10
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 15,
+  "fields": {
+    "product": 4,
+    "size": "Large",
+    "color": "denim blue",
+    "stock": 10
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 16,
+  "fields": {
+    "product": 4,
+    "size": "X-Large",
+    "color": "denim blue",
+    "stock": 10
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 17,
+  "fields": {
+    "product": 7,
+    "size": "Small",
+    "color": "green",
+    "stock": 5
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 18,
+  "fields": {
+    "product": 7,
+    "size": "Medium",
+    "color": "green",
+    "stock": 4
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 19,
+  "fields": {
+    "product": 7,
+    "size": "Large",
+    "color": "green",
+    "stock": 3
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 20,
+  "fields": {
+    "product": 7,
+    "size": "X-Large",
+    "color": "green",
+    "stock": 7
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 21,
+  "fields": {
+    "product": 6,
+    "size": "Small",
+    "color": "orange",
+    "stock": 5
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 22,
+  "fields": {
+    "product": 6,
+    "size": "Medium",
+    "color": "orange",
+    "stock": 4
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 23,
+  "fields": {
+    "product": 6,
+    "size": "Large",
+    "color": "orange",
+    "stock": 8
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 24,
+  "fields": {
+    "product": 5,
+    "size": "Medium",
+    "color": "rose",
+    "stock": 4
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 25,
+  "fields": {
+    "product": 5,
+    "size": "Large",
+    "color": "rose",
+    "stock": 6
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 26,
+  "fields": {
+    "product": 5,
+    "size": "XX-Large",
+    "color": "pink",
+    "stock": 8
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 27,
+  "fields": {
+    "product": 8,
+    "size": "Small",
+    "color": "orange",
+    "stock": 0
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 28,
+  "fields": {
+    "product": 8,
+    "size": "Large",
+    "color": "orange",
+    "stock": 12
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 29,
+  "fields": {
+    "product": 8,
+    "size": "X-Large",
+    "color": "orange",
+    "stock": 5
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 30,
+  "fields": {
+    "product": 9,
+    "size": "X-Small",
+    "color": "blue",
+    "stock": 5
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 31,
+  "fields": {
+    "product": 9,
+    "size": "Medium",
+    "color": "blue",
+    "stock": 7
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 32,
+  "fields": {
+    "product": 9,
+    "size": "X-Large",
+    "color": "blue",
+    "stock": 9
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 33,
+  "fields": {
+    "product": 10,
+    "size": "Small",
+    "color": "black",
+    "stock": 4
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 34,
+  "fields": {
+    "product": 10,
+    "size": "Medium",
+    "color": "black",
+    "stock": 7
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 35,
+  "fields": {
+    "product": 10,
+    "size": "XX-Large",
+    "color": "black",
+    "stock": 4
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 36,
+  "fields": {
+    "product": 11,
+    "size": "Small",
+    "color": "black",
+    "stock": 7
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 37,
+  "fields": {
+    "product": 11,
+    "size": "Medium",
+    "color": "black",
+    "stock": 5
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 38,
+  "fields": {
+    "product": 11,
+    "size": "X-Large",
+    "color": "black",
+    "stock": 9
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 39,
+  "fields": {
+    "product": 11,
+    "size": "3X-Large",
+    "color": "black",
+    "stock": 6
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 40,
+  "fields": {
+    "product": 12,
+    "size": "Medium",
+    "color": "dark green",
+    "stock": 6
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 41,
+  "fields": {
+    "product": 12,
+    "size": "X-Large",
+    "color": "dark green",
+    "stock": 8
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 42,
+  "fields": {
+    "product": 12,
+    "size": "3X-Large",
+    "color": "dark green",
+    "stock": 5
+  }
+},
+{
+  "model": "products.review",
+  "pk": 1,
+  "fields": {
+    "product": 1,
+    "name": "naifa",
+    "rating": 5,
+    "comment": "good",
+    "created_at": "2026-04-10T18:15:42.778Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 2,
+  "fields": {
+    "product": 1,
+    "name": "aalam",
+    "rating": 4,
+    "comment": "good quality",
+    "created_at": "2026-04-10T18:23:01.232Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 3,
+  "fields": {
+    "product": 4,
+    "name": "mohannad",
+    "rating": 3,
+    "comment": "excellent",
+    "created_at": "2026-04-10T18:29:55.220Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 4,
+  "fields": {
+    "product": 7,
+    "name": "mohannad",
+    "rating": 4,
+    "comment": "good product",
+    "created_at": "2026-04-11T14:27:13.780Z"
+  }
+},
+{
+  "model": "products.review",
+  "pk": 5,
+  "fields": {
+    "product": 9,
+    "name": "alam",
+    "rating": 4,
+    "comment": "good",
+    "created_at": "2026-04-11T18:23:46.755Z"
+  }
+}
+]
