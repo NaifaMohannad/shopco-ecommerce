@@ -6,9 +6,10 @@ from decouple import config
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-v!&3(el77(jijl0t9*8u8_scg0=v#r^+kd#861(j!no382xh0#'
+SECRET_KEY = config('SECRET_KEY', default='django-insecure-v!&3(el77(jijl0t9*8u8_scg0=v#r^+kd#861(j!no382xh0#')
 
 DEBUG = config('DEBUG', default=False, cast=bool)
+
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
@@ -20,6 +21,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+    'cloudinary',
+    'cloudinary_storage',
     'products',
     'users',
     'orders',
@@ -56,7 +59,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'ecommerce.wsgi.application'
-SECRET_KEY = os.environ.get('SECRET_KEY', 'your-secret-key')
 
 DATABASES = {
     'default': dj_database_url.config(
@@ -77,7 +79,12 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-STATIC_URL = 'static/'
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Static files
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Media files
 MEDIA_URL = '/media/'
@@ -100,12 +107,10 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
 }
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-# Static files
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-# Media files
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# Cloudinary settings
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': config('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': config('CLOUDINARY_API_KEY'),
+    'API_SECRET': config('CLOUDINARY_API_SECRET'),
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
