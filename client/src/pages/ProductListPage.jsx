@@ -78,7 +78,7 @@ function ProductListPage() {
     setPriceRange(500);
 
     dispatch(fetchProducts({ category, dress_style, search }));
-  }, [location.search]);
+  }, [location.search,dispatch]);
 
   // Runs when sidebar filters change
   useEffect(() => {
@@ -105,6 +105,8 @@ function ProductListPage() {
     selectedSize,
     selectedColor,
     priceRange,
+    dispatch,
+    location.search
   ]);
   const handleCategoryClick = (catName) => {
     setFilters({
