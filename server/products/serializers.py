@@ -38,14 +38,12 @@ class ProductSerializer(serializers.ModelSerializer):
         ]
 
     def get_image(self, obj):
-        if obj.image:
-            image_url = str(obj.image)
-            # If already a Cloudinary URL return as is
-            if image_url.startswith('http'):
-                return image_url
-            # Otherwise build full URL
-            return f'https://shopco-api.onrender.com/media/{image_url}'
-        return None
+     if obj.image:
+        image_url = str(obj.image)
+        if image_url.startswith('http'):
+            return image_url
+        return f'https://res.cloudinary.com/dhpozlrwe/image/upload/{image_url}'
+     return None
 
 class ProductListSerializer(serializers.ModelSerializer):
     category = CategorySerializer(read_only=True)
@@ -61,11 +59,9 @@ class ProductListSerializer(serializers.ModelSerializer):
         ]
 
     def get_image(self, obj):
-        if obj.image:
-            image_url = str(obj.image)
-            # If already a Cloudinary URL return as is
-            if image_url.startswith('http'):
-                return image_url
-            # Otherwise build full URL
-            return f'https://shopco-api.onrender.com/media/{image_url}'
-        return None
+     if obj.image:
+        image_url = str(obj.image)
+        if image_url.startswith('http'):
+            return image_url
+        return f'https://res.cloudinary.com/dhpozlrwe/image/upload/{image_url}'
+     return None

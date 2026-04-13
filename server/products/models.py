@@ -1,6 +1,7 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
-# Category Model (T-shirts, Shorts, Shirts etc.)
+# Category Model
 class Category(models.Model):
     name = models.CharField(max_length=100)
 
@@ -11,7 +12,7 @@ class Category(models.Model):
         verbose_name_plural = "Categories"
 
 
-# Dress Style Model (Casual, Formal, Party, Gym)
+# Dress Style Model
 class DressStyle(models.Model):
     name = models.CharField(max_length=100)
 
@@ -29,7 +30,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     original_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     discount = models.IntegerField(default=0)
-    image = models.ImageField(upload_to='products/', null=True, blank=True)
+    image = CloudinaryField('image', null=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
     dress_style = models.ForeignKey(DressStyle, on_delete=models.SET_NULL, null=True)
     rating = models.DecimalField(max_digits=3, decimal_places=1, default=0)
@@ -39,7 +40,7 @@ class Product(models.Model):
         return self.name
 
 
-# Product Variant Model (sizes and colors)
+# Product Variant Model
 class ProductVariant(models.Model):
     SIZE_CHOICES = [
         ('XX-Small', 'XX-Small'),
@@ -72,4 +73,3 @@ class Review(models.Model):
 
     def __str__(self):
         return f"{self.name} - {self.product.name}"
-# Create your models here.
